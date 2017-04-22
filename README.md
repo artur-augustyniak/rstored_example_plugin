@@ -1,1 +1,1 @@
-cargo build && cp -f target/debug/libexample.so /tmp/
+cargo build && cp -f target/debug/librustexampleplugin.so /tmp/
