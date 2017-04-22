@@ -1,0 +1,1 @@
+cargo build && cp -f target/debug/libexample.so /tmp/
