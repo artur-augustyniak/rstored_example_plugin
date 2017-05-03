@@ -1,8 +1,10 @@
+use std::ffi::CString;
+use std::os::raw::c_char;
+
 #[no_mangle]
-pub fn run_probe() -> String {
-    //your stuff, result must be encoded in json string
-    let ret = r#"{ "key":"value", "len":31, "foo":"bar"}"#.to_string();
-    ret
+pub fn run_probe() -> *const c_char {
+    let s = CString::new("Hello Rust dynlib plugin!").unwrap();
+    return s.into_raw();
 }
 
 #[cfg(test)]
