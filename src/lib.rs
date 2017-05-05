@@ -43,8 +43,8 @@ mod tests {
     fn test_run_probe() {
         unsafe {
             let expected = STR;
-            let extern_str = CStr::from_ptr(run_probe()).to_str().unwrap();
-            assert_eq!(expected, extern_str);
+            let actual = CStr::from_ptr(run_probe()).to_str().unwrap();
+            assert_eq!(expected, actual);
         }
     }
 }
