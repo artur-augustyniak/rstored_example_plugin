@@ -8,3 +8,4 @@ name = "rustexampleplugin"
 crate-type = ["dylib"]
 
 [dependencies]
+libc = "0.2.0"
